@@ -1,0 +1,152 @@
+body {
+  background-color: #F1F6F9;
+  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.App  {
+  
+  position: relative;
+  
+  width: 100%;
+}
+.container_img {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.light_one {
+  margin-top: -300px;
+  opacity: 0;
+ 
+}
+
+.light_two {
+  margin-top: -300px;
+  opacity: 0;
+  
+   
+}
+
+.light_three {
+  margin-top: -300px;
+  opacity: 0;
+    
+}
+
+.container_header {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 80vh;
+
+}
+
+.header {
+  text-align: center;
+  font-size: 60px;
+  font-weight: 700;
+  -webkit-text-stroke: 2px black;
+  color: transparent;    
+	-webkit-background-clip: text;
+	background-clip: text;
+	background-image: linear-gradient(50deg, #C92C6D,  #FC2947 );
+    
+}
+
+
+.btn {
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 2px solid black;
+  border-radius: 7px;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn:after {
+  content: "";
+  background-color: #BFDB38;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  border-radius: 7px;
+  transition: 0.2s;
+}
+
+.btn:hover:after  {
+  top: 0px;
+  left: 0px;
+}
+
+p {
+  background-image: linear-gradient(50deg,   #F9F9F9,  #FDFF00);
+  color: #2D2727;
+  padding: 15px;
+  margin-top: 70px;
+  border-radius:  20px;
+  border: 1.2px #454545 solid;
+  text-transform: uppercase;
+  font-size: 20px;
+  width: 60%;
+  text-align: center;
+}
+
+@media all and (max-width: 1190px){
+  .light_three, .light_two, .light_one {
+
+    width: 280px;
+  } 
+
+}
+ 
+
+@media all and (max-width: 500px) {
+
+  .light_two, .light_three {
+    display: none;
+  }
+
+  .light_one {
+    width: 400px;
+  }
+
+  .header {
+    font-size: 45px;
+  }
+
+  
+
+  .btn {
+    font-size: 15px;
+    margin-top: 100px;
+  }
+
+  p {
+    text-align: center;
+    font-size: 18px;
+  }
+
+}
