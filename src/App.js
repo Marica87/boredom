@@ -39,8 +39,8 @@ const [tips, setTips] = useState("");
 
 
 
-const fetchTips = async () => {
-const responce = await fetch(`http://www.boredapi.com/api/activity/`);
+const fetchTips =  async () => {
+const responce = await fetch(`https://www.boredapi.com/api/activity/`);
 const data = await responce.json();
 
 setTips(data.activity);
@@ -48,12 +48,10 @@ setTips(data.activity);
 }  
 
 useEffect(()=> {
+  
+  fetchTips();
 
   animation()
-
-
-fetchTips();
-
 
 },[])
 
